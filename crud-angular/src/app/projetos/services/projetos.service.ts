@@ -17,7 +17,7 @@ export class ProjetosService {
     return this.httpClient.get<Projeto[]>(this.API)
     .pipe(
       first(),
-      delay(3000),
+      //delay(3000),
       tap(projetos => console.log(projetos))
     );
   }
