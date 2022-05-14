@@ -9,7 +9,7 @@ import { Projeto } from './../model/projeto';
 })
 export class ProjetosService {
 
-  private readonly API = '/assets/projetos.json';
+  private readonly API = 'api/projetos';
 
   constructor(private httpClient: HttpClient) { }
 

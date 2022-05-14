@@ -3,6 +3,7 @@
 
   <div *ngIf="projetos$ | async as projetos; else loading">
     <table mat-table [dataSource]="projetos" class="mat-elevation-z8">
+
       <!-- Nome Column -->
       <ng-container matColumnDef="nome">
         <th mat-header-cell *matHeaderCellDef>Projeto</th>

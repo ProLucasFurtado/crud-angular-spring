@@ -1,5 +1,5 @@
 export interface Projeto {
   _id: string;
-  nome: string;
+  name: string;
   categoria: string;
 }

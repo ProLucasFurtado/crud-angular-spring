@@ -21,8 +21,8 @@ public class CrudSpringApplication {
 			projetoRepository.deleteAll();
 
 			Projeto p = new Projeto();
-			p.setName("Angular com Spring");
-			p.setCategory("front-end");
+			p.setNome("Angular com Spring");
+			p.setCategoria("front-end");
 
 			projetoRepository.save(p);
 		};

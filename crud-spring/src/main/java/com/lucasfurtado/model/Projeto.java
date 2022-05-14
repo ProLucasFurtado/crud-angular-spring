@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Data;
 
 @Data
@@ -14,11 +16,12 @@ public class Projeto {
   
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @JsonProperty("_id")
     private Long id;
 
     @Column(length = 200, nullable = false)
-    private String name;
+    private String nome;
     
     @Column(length = 10, nullable = false)
-    private String category;
+    private String categoria;
 }
