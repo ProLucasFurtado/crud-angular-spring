@@ -1,4 +1,4 @@
-package com.lucasfurtado;
+package com.lucasfurtado.crudspring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
