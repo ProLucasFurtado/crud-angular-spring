@@ -14,7 +14,7 @@ import { ProjetosService } from './../services/projetos.service';
 export class ProjetosComponent implements OnInit {
 
   projetos$: Observable<Projeto[]>;
-  displayedColumns = ['nome', 'categoria'];
+  displayedColumns = ['nome', 'categoria', 'acoes'];
 
   //projetosService: ProjetosService;
 

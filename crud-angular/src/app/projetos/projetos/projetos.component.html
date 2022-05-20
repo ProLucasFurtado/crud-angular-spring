@@ -18,6 +18,27 @@
         </td>
       </ng-container>
 
+      <!-- Ações Column -->
+      <ng-container matColumnDef="acoes">
+        <mat-header-cell *matHeaderCellDef="acoes">
+          <button mat-mini-fab color="accent" aria-label="Adicionar um projeto">
+            <mat-icon>add</mat-icon>
+          </button>
+        </mat-header-cell>
+
+        <mat-cell *matCellDef="let projeto">
+          <button mat-icon-button color="primary" aria-label="Editar projeto">
+            <mat-icon>edit</mat-icon>
+          </button>
+
+          <button mat-icon-button color="warn" aria-label="Remover projeto">
+            <mat-icon>delete</mat-icon>
+          </button>
+
+        </mat-cell>
+
+      </ng-container>
+
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>
