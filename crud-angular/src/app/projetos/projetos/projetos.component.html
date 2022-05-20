@@ -20,9 +20,9 @@
 
       <!-- Ações Column -->
       <ng-container matColumnDef="acoes">
-        <mat-header-cell *matHeaderCellDef="acoes">
+        <mat-header-cell *matHeaderCellDef>
           <button mat-mini-fab color="accent" aria-label="Adicionar um projeto">
-            <mat-icon>add</mat-icon>
+            <mat-icon (click)="onAdd()">add</mat-icon>
           </button>
         </mat-header-cell>
 

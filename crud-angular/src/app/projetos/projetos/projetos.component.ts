@@ -5,6 +5,7 @@ import { catchError, Observable, of } from 'rxjs';
 
 import { Projeto } from './../model/projeto';
 import { ProjetosService } from './../services/projetos.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-projetos',
@@ -20,10 +21,12 @@ export class ProjetosComponent implements OnInit {
 
   constructor(
     private projetosService: ProjetosService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private router: Router,
+    private route: ActivatedRoute
     ) {
-    //this.projetos = [];
-    //this.projetosService = new ProjetosService();
+      //this.projetos = [];
+      //this.projetosService = new ProjetosService();
     this.projetos$ = this.projetosService.list()
     .pipe(
       catchError(error => {
@@ -42,4 +45,7 @@ export class ProjetosComponent implements OnInit {
 
   ngOnInit(): void { }
 
+  onAdd(){
+    this.router.navigate(['new'], {relativeTo:this.route});
+  }
 }
