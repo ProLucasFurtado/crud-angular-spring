@@ -21,4 +21,8 @@ export class ProjetosService {
       tap(projetos => console.log(projetos))
     );
   }
+
+  save(record: Projeto) {
+    this.httpClient.post<Projeto>(this.API);
+  }
 }
