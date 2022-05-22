@@ -23,6 +23,6 @@ export class ProjetosService {
   }
 
   save(record: Projeto) {
-    this.httpClient.post<Projeto>(this.API);
+    return this.httpClient.post<Projeto>(this.API, record).pipe(first());
   }
 }
