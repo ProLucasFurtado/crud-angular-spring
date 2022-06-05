@@ -43,7 +43,7 @@ export class ProjetoFormComponent implements OnInit {
   }
 
   private onError() {
-    this.snackBar.open('Erro ao salvar projeto.', 'X', {duration: 5000 });
+    this.snackBar.open('Erro ao salvar projeto!', 'X', {duration: 5000 });
   }
 
 }
